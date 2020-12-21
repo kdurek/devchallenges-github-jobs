@@ -3,9 +3,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      mon: ["Montserrat", "sans-serif"],
+      pop: ["Poppins", "sans-serif"],
+      rob: ["Roboto", "sans-serif"],
+      // mon: ["Montserrat", "sans-serif"],
       // heb: ["Heebo", "sans-serif"],
-      // pop: ["Poppins", "sans-serif"],
     },
     colors: {
       transparent: {
@@ -16,8 +17,11 @@ module.exports = {
       },
       black: {
         DEFAULT: "#000000",
+        c282538: "#282538",
       },
       gray: {
+        cF6F7FB: "#F6F7FB",
+        cB9BDCF: "#B9BDCF",
         // cA9A9A9: "#A9A9A9",
         // cE0E0E0: "#E0E0E0",
         // cF2F2F2: "#F2F2F2",
@@ -33,11 +37,17 @@ module.exports = {
         // c27AE60: "#27AE60",
       },
       blue: {
+        c334680: "#334680",
+        c1E86FF: "#1E86FF",
         // c2D9CDB: "#2D9CDB",
         // c100E1D: "#100E1D",
       },
     },
-    extend: {},
+    extend: {
+      backgroundImage: (theme) => ({
+        "image-searchbar": "url('/image-searchbar.png')",
+      }),
+    },
   },
   variants: {
     extend: {},

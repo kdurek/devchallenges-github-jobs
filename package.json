@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.0.4",
+    "moment": "^2.29.1",
     "next": "10.0.3",
     "postcss": "^8.1.14",
     "react": "17.0.1",

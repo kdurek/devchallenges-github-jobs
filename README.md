@@ -1,6 +1,6 @@
 <!-- Please update value of CHANGE_ME  -->
 
-<h1 align="center">CHANGE_ME</h1>
+<h1 align="center">Github Jobs</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -12,11 +12,11 @@
       Demo
     </a>
     <span> | </span>
-    <a href="CHANGE_ME">
+    <a href="https://github.com/durashere/devchallenges-github-jobs">
       Solution
     </a>
     <span> | </span>
-    <a href="CHANGE_ME">
+    <a href="https://devchallenges.io/challenges/TtUjDt19eIHxNQ4n5jps">
       Challenge
     </a>
   </h3>
@@ -40,18 +40,27 @@
 
 ### User Stories
 
-- [x] Example story
+- [ ] I can see a list of jobs in a city by default
+- [ ] I can search for jobs with a given keyword
+- [ ] I can search for jobs with a city name, zip code or other location
+- [ ] I can select one option from at least 4 pre-defined options
+- [ ] I can search for a full-time job only
+- [ ] I can see a list of jobs with their logo, company name, location, and posted time.
+- [ ] When I select a job, I can see job descriptions and how to apply like the given design.
+- [ ] When I am on the job details page, I can go back to the search page
+- [ ] I can see a list of jobs in the closest city from my location by default (optional)
+- [ ] I can see jobs in different pages, 5 items each page (optional)
 
 ### Built With
 
 - [NextJS](https://nextjs.org/)
 - [Tailwind](https://tailwindcss.com/)
+- [API](https://jobs.github.com/api)
   <!-- - [Storybook](https://storybook.js.org/) -->
-  <!-- - [API](CHANGE_ME) -->
 
 ## Features
 
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](CHANGE_ME) was to build an application to complete the given user stories.
+This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/TtUjDt19eIHxNQ4n5jps) was to build an application to complete the given user stories.
 
 ## How To Use
 
@@ -59,7 +68,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone CHANGE_ME
+$ git clone https://github.com/durashere/devchallenges-github-jobs
 
 # Install dependencies
 $ npm install
