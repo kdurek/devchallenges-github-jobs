@@ -5,43 +5,49 @@ import SearchBar from "../components/SearchBar"
 import SearchOptions from "../components/SearchOptions"
 import SearchResults from "../components/SearchResults"
 
-export default function Home({ items, page }) {
+export default function Home({ jobs }) {
   const [isLoading, setIsLoading] = useState(false)
   const [isFullTime, setIsFullTime] = useState(false)
+  const [isLocation, setIsLocation] = useState("New York")
   const [isDescription, setIsDescription] = useState("")
 
   const searchString = [
+    `?location=${isLocation}`,
     `${isDescription ? `&description=${isDescription}` : ""}`,
     `${isFullTime ? `&full_time=${isFullTime}` : ""}`,
   ].join("")
 
-  // console.log("isFullTime:", isFullTime)
-  // console.log("searchString:", searchString)
-
   const getNewSearch = async () => {
     setIsLoading(true)
-    await Router.push(`/?page=${page}${searchString}`)
+    await Router.push(`/${searchString}`)
     setIsLoading(false)
   }
 
-  // console.log("Page:", page)
-  // console.log("Items:", items.length)
-
   useEffect(() => {
-    // console.log(items[0])
     getNewSearch()
-  }, [isFullTime])
+  }, [isFullTime, isLocation])
 
   return (
     <Layout>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-8">
         <SearchBar
           getNewSearch={getNewSearch}
           setIsDescription={setIsDescription}
         />
-        <SearchOptions isFullTime={isFullTime} setIsFullTime={setIsFullTime} />
-        <button onClick={() => getNewSearch()}>Search</button>
-        <button
+        <div className="flex flex-col xl:flex-row gap-8">
+          <div className="xl:w-1/3">
+            <SearchOptions
+              isFullTime={isFullTime}
+              setIsFullTime={setIsFullTime}
+              isLocation={isLocation}
+              setIsLocation={setIsLocation}
+            />
+          </div>
+          <div className="xl:w-2/3">
+            {isLoading ? "LOADING" : <SearchResults jobs={jobs} />}
+          </div>
+        </div>
+        {/* <button
           onClick={() => Router.push(`/?page=${page - 1}${searchString}`)}
           disabled={page <= 1}
         >
@@ -51,18 +57,17 @@ export default function Home({ items, page }) {
           onClick={() => Router.push(`/?page=${page + 1}${searchString}`)}
         >
           NEXT
-        </button>
-        {isLoading ? "LOADING" : <SearchResults items={items} />}
+        </button> */}
       </div>
     </Layout>
   )
 }
 
 export async function getServerSideProps({
-  query: { page = 1, description, full_time },
+  query: { location, description, full_time },
 }) {
   const url = [
-    `https://jobs.github.com/positions.json?page=${page}`,
+    `https://jobs.github.com/positions.json?location=${location}`,
     `${description ? `&description=${description}` : ""}`,
     `${full_time ? `&full_time=${full_time}` : ""}`,
   ].join("")
@@ -71,6 +76,6 @@ export async function getServerSideProps({
   const data = await res.json()
 
   return {
-    props: { items: data, page: parseInt(page, 10) },
+    props: { jobs: data },
   }
 }

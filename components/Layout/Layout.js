@@ -3,12 +3,12 @@ import Router from "next/router"
 
 const Layout = ({ children }) => {
   return (
-    <div className="p-3 bg-gray-cF6F7FB">
+    <div className="px-3 pt-3 xl:px-32 xl:pt-8 bg-gray-cF6F7FB">
       <Head>
         <title>Github Jobs</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto:wght@400;500;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@300;500;700&family=Roboto:wght@400;500;700&display=swap"
           rel="stylesheet"
         />
         <link
@@ -26,12 +26,12 @@ const Layout = ({ children }) => {
 
       <main>{children}</main>
 
-      {/* <footer>
-        <p className="pb-4 font-mon text-black text-sm font-semibold">
+      <footer>
+        <p className="text-center pb-4 pt-20 xl:py-10 font-mon text-gray-cB9BDCF text-sm font-semibold">
           <a href="https://github.com/durashere">durashere</a> @{" "}
           <a href="https://devchallenges.io">DevChallenges.io</a>
         </p>
-      </footer> */}
+      </footer>
     </div>
   )
 }

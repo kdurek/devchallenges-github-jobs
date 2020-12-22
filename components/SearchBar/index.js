@@ -5,10 +5,10 @@ const SearchBar = ({ getNewSearch, setIsDescription }) => {
   }
 
   return (
-    <div className="py-10 px-5 rounded-md bg-image-searchbar bg-cover bg-center">
+    <div className="py-10 px-5 flex fle-col justify-center rounded-md bg-image-searchbar bg-cover bg-center">
       <form
         onSubmit={(e) => handleSubmit(e)}
-        className="p-1 flex gap-2 items-center rounded-md shadow-md bg-white"
+        className="p-1 xl:w-3/4 flex gap-2 items-center rounded-md shadow-md bg-white"
       >
         <span className="pl-2 py-2 text-gray-cB9BDCF material-icons">
           work_outline

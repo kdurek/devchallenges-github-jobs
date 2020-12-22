@@ -5,7 +5,7 @@ module.exports = {
     fontFamily: {
       pop: ["Poppins", "sans-serif"],
       rob: ["Roboto", "sans-serif"],
-      // mon: ["Montserrat", "sans-serif"],
+      mon: ["Montserrat", "sans-serif"],
       // heb: ["Heebo", "sans-serif"],
     },
     colors: {
