@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="CHANGE_ME">
+    <a href="https://devchallenges-github-jobs.vercel.app">
       Demo
     </a>
     <span> | </span>
@@ -76,5 +76,5 @@ $ yarn
 
 # Run the app
 $ npm run dev
-yarn dev
+$ yarn dev
 ```
