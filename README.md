@@ -49,7 +49,7 @@
 - [x] When I select a job, I can see job descriptions and how to apply like the given design.
 - [x] When I am on the job details page, I can go back to the search page
 - [ ] I can see a list of jobs in the closest city from my location by default (optional)
-- [ ] I can see jobs in different pages, 5 items each page (optional)
+- [x] I can see jobs in different pages, 5 items each page (optional)
 
 ### Built With
 

@@ -22,6 +22,7 @@ module.exports = {
       gray: {
         cF6F7FB: "#F6F7FB",
         cB9BDCF: "#B9BDCF",
+        cB7BCCE: "#B7BCCE",
         // cA9A9A9: "#A9A9A9",
         // cE0E0E0: "#E0E0E0",
         // cF2F2F2: "#F2F2F2",

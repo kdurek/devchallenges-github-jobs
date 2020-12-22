@@ -1,6 +1,7 @@
 import moment from "moment"
 import Link from "next/link"
 import Layout from "../../components/Layout/Layout"
+import parse from "html-react-parser"
 
 const SearchResults = ({ job }) => {
   return (
@@ -21,10 +22,9 @@ const SearchResults = ({ job }) => {
             <p className="font-pop font-bold text-sm text-gray-cB9BDCF">
               HOW TO APPLY
             </p>
-            <div
-              dangerouslySetInnerHTML={{ __html: job.how_to_apply }}
-              className="font-pop font-medium text-sm text-blue-c334680"
-            />
+          </div>
+          <div className="font-pop font-medium text-sm text-blue-c334680">
+            {parse(job.how_to_apply)}
           </div>
         </div>
         <div className="flex flex-col gap-9">
@@ -62,10 +62,9 @@ const SearchResults = ({ job }) => {
               </div>
             </div>
           </div>
-          <div
-            dangerouslySetInnerHTML={{ __html: job.description }}
-            className="font-rob font-normal text-base text-blue-c334680"
-          />
+          <div className="font-rob font-normal text-base text-blue-c334680">
+            {parse(job.description)}
+          </div>
         </div>
       </div>
     </Layout>
